@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1475247646 source:/home/breandan/Documents/Work/College/3D5A - Data Structures & Algorithms/Week 1/Lab/3D5A Lab 1C/main.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
