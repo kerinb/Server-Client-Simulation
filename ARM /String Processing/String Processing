@@ -1,0 +1,30 @@
+        AREA StringProcessinG, CODE, READONLY
+        IMPORT main
+        EXPORT start
+        
+start 
+        LDR R1, =string; R1 = 0xA1000004
+        LDR R0, =0;
+        LDRB R2, [R1]
+        CMP R2, #0
+        BEQ stop; END IF NULL 
+        
+loop
+        LDRB R2, [R1], #1; R2 = FIRST AND EVERY CONSECUTIVE BYTE AFTER #1->NEXT
+        CMP R2, #0x20; WHILE R2 ! = null
+        BNE endloop
+        LDRB R2, [R1], #1
+        CMP R2, #0x41
+        BLO endloop
+        ADD R0, R0, #1
+
+endloop
+        CMP R2, #0
+        BNE loop
+        ADD R0, R0, #1; ADD FOR LAST WORD
+stop B stop
+
+        AREA TestString, DATA, READWRITE
+string DCB "Hello This is a test      string", 0
+
+        END 

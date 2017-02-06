@@ -1,0 +1,55 @@
+;
+;
+
+        AREA, BasicSummatio, CODE, READONLY
+        IMPORT main
+        EXPORT start
+        
+start 
+        LDR R0, =0x407; R0 = 110010111
+        MOV R1, R0; R1 = R0
+        MOV R2, #0 
+        
+        ;GET NUMBER OF SET BITS
+        ; GET BIT 1
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 2
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+         
+        ; GET BIT 3
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 4
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 5
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 6
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 7
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 8
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET BIT 9
+        MOVS R1, R1, LSR #1; R1 = R1 >> 1
+        ADC R2, R2, #0; R2 = R2 + C-FLAG VALUE
+        
+        ; GET NUMBER OF CLEARED BITS
+        LDR R3, =9; TOTAL NUMBER OF BITS 
+        SUB R1, R3, R2
+        
+stop B stop
+        END

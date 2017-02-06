@@ -1,0 +1,15 @@
+;This is a simple ARM assembly language prgoram that has the user set the value of Register R1 in in the Register windows in the Keil uvision IDE. 
+;The program sums the integer over three iterations, and then stores the final summed value in regsiter R0. 
+
+        AREA, BasicSummatio, CODE, READONLY
+        IMPORT main
+        EXPORT start
+        
+start 
+        MOV R0, R1
+        ADD R0, R0, R0
+        ADD R0, R0, R0
+        ADD R0, R0, R0
+        
+stop B stop
+        END
