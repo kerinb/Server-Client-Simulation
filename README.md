@@ -1,0 +1,2 @@
+This set of programs contains server and client programs which transmit packets of text data across a simulated network using sockets. 
+A gremlin function is used to simulate packets being dropped or corrupted. A CRC-16 checksum Algorithm is also used to check each packet recieved returning either an ACK or NACK. To do: I am still to implement a selective repeat.
