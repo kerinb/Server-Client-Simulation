@@ -5,4 +5,3 @@ There are two files in this exercise, they are:
 2. A reciever (host) that checks the sequence number, checksum and properly handled errors. It will also return an ACK or NACK (when necessary) and will then write the data into an output file.
 
 This program is written in Python 2.7
-# My project's README
